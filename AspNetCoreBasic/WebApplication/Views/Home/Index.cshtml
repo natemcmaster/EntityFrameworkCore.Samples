@@ -1,0 +1,16 @@
+@model IList<DataLibrary.Blog>
+
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <h1>Available Blogs</h1>
+        <ul>
+            @foreach(var b in Model)
+            {
+                <li>@b.Name</li>
+            }
+        </ul>
+    </body>
+</html>
