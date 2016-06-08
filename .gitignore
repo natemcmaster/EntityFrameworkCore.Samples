@@ -1,0 +1,19 @@
+# General files
+.DS_Store
+Thumbs.db
+
+# Visual Studio files
+.vs/
+.vscode/
+*.user
+
+# Build output
+bin/
+obj/
+
+# NuGet file
+project.lock.json
+
+# Do not check in files that could contain passwords
+appsettings.Development.json
+appsettings.Production.json
