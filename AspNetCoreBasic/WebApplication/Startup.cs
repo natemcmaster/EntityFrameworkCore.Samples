@@ -23,16 +23,17 @@ namespace WebApplication
         public IConfigurationRoot Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
-        { 
+        {
             services.AddMvc();
-            services.AddDbContext<ApplicationDbContext>(o => 
-                o.UseSqlServer(Configuration["ConnectionString:ApplicationDbContext"], 
+
+            services.AddDbContext<ApplicationDbContext>(o =>
+                o.UseSqlServer(Configuration["ConnectionString:ApplicationDbContext"],
                 b => b.MigrationsAssembly("WebApplication")));
         }
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole(LogLevel.Debug);
+            loggerFactory.AddConsole(LogLevel.Information);
 
             app.UseDeveloperExceptionPage();
 

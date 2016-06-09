@@ -1,11 +1,13 @@
 # General files
 .DS_Store
 Thumbs.db
+*.log
 
 # Visual Studio files
 .vs/
 .vscode/
 *.user
+launchSettings.json
 
 # Build output
 bin/

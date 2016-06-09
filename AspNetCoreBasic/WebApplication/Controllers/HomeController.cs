@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +15,13 @@ namespace WebApplication.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var model = await _context.Blogs.ToListAsync();
+            var model = await _context
+                .Blogs
+                // we don't need EF's change tracker to start tracking these entities
+                // so we can save a little overhead by turning off the change tracker for this query
+                .AsNoTracking() 
+                .ToListAsync();
+
             return View(model);
         }
     }
