@@ -51,10 +51,6 @@ namespace DockerWebApp
                     
                     logger.LogInformation($"Added {changes} new customers to database");
                 }
-                else
-                {
-                    logger.LogInformation("Database already has data. Skipping seeding");
-                }
             }
         }
     }

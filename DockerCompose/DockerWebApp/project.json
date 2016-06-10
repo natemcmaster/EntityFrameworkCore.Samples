@@ -12,8 +12,10 @@
   },
   "publishOptions": {
     "include": [
-      "config.json",
       "docker-start.sh"
+    ],
+    "exclude": [
+      "config.json"
     ]
   },
   "dependencies": {
@@ -22,7 +24,6 @@
       "version": "1.0.0-rc3-*"
     },
     "Npgsql.EntityFrameworkCore.PostgreSQL": "1.0.0-*",
-    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-*",
     "Microsoft.AspNetCore.Mvc": "1.0.0-*",
     "Microsoft.Extensions.Configuration.Json": "1.0.0-*",
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-*",
