@@ -1,0 +1,15 @@
+version: '2'
+services:
+  web:
+    build: ./DockerWebApp/
+    ports: 
+      - "5000:5000"
+    depends_on:
+      - dbserver
+    environment:
+    # TODO use a secure, keystore instead for connection strings
+      Npgsql__ConnectionString: 'Server=dbserver;Username=postgres;Port=5432;Database=Northwind'
+      DB_HOSTNAME: dbserver
+      DB_PORT: 5432
+  dbserver:
+    image: postgres:9.5
