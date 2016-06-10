@@ -1,0 +1,7 @@
+{
+  "projects": [
+    "AspNetCoreBasic",
+    "DockerCompose",
+    "Logging"
+  ]
+}
