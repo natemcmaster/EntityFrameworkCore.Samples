@@ -1,0 +1,5 @@
+{
+    "Npgsql": {
+        "ConnectionString": "Server=192.168.99.100;Port=32000;Username=postgres;Database=Northwind"
+    }
+}
